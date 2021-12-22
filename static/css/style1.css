@@ -1,0 +1,42 @@
+#services {
+	background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(img/gallery/5bedroom.jpg);
+	background-size: cover;
+	background-position: center;
+	color: white !important;
+	background-attachment: fixed;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	}
+
+#services h1,h3 {
+	text-align:center;
+	color: white !important;
+	padding-bottom: 10px;
+	}
+	
+#services h1::after {
+	content: '';
+	background: white;
+	display: block;
+	height: 3px;
+	width: 170px;
+	margin: 20px auto 5px;
+	}
+	
+.services {
+	margin-top: 40px;
+}
+
+#services p
+{
+    font-size: 14px;
+    margin-top: 20px;
+    color: white;
+}
+
+.services .col-md-3:hover
+{
+    background: #007bff;
+    cursor: pointer;
+    transition: 0.7s;
+}

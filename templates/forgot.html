@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            label{
+                font-size: 30px;
+                color: coral;
+                font-style: italic;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            body{
+                background-color:#696969; 
+            }
+            form{
+                margin-top : 280px;
+                margin-left : 400px;
+            }
+        </style>
+
+    </head>
+    <body>
+        {% if error %}
+        {{ error }}
+        {% endif %}
+        <form method="POST" action="/otp/">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="SUBMIT">
+        </form>
+    </body>
+</html>

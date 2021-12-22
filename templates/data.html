@@ -1,0 +1,86 @@
+<!---<html>
+    <head>
+        <title>
+            PG DATA
+        </title>
+        <style>
+            body{
+                background-image:url('../static/img/abc1.jpg'); 
+                background-position: bottom;
+            }
+            p{
+                font-size:30px;
+                font-style: italic;
+                font-family: 'Times New Roman', Times, serif;
+                color: cornflowerblue;
+            }
+            div {
+                display:inline-flexbox;
+                padding-top: 20px; 
+            }
+            h2{
+                color:coral;
+            }
+            h1{
+                color:palevioletred;
+                font-style: italic;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size : 40px;
+            }
+        </style>
+    </head>
+    <body>
+        {% for var in pgs %}
+        <div>
+        <h1>CONTACT NAME : {{ var.name }}</h1>
+        <p>DESCRIPTION : {{ var.description }}</p>
+        <h2>AREA : {{ var.area }}</h2>
+        <h2>RENT : {{ var.rent }}</h2>
+        <h2>FACILITIES : {{ var.facilities }}</h2>
+        <h2>MEALS AVIALABLE : {{ var.meals }}</h2>
+        <h3>CONTACT NUMBER : {{ var.contact }}</h3>
+        {% endfor %}
+        </div>
+    </body>
+
+    </html>-->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- Stylesheet
+    ================================================== -->
+
+</head>
+<body  id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="background-color:rgb(252, 252, 252)">
+        
+
+<div class="container">
+        {% for var in pgs %}
+        <br><br>
+  <h2 style='color:darkslateblue;font-size:200%'>{{ var.area.upper }}</h2><br>
+  <div class="card">
+    <div class="card-header" style="color:#2E86C1;font-size:180%">{{ var.description }}
+    </div>
+    <div class="card-body" style="color:rgb(8, 8, 8);font-size:140%;font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+    <label> Facilities : </label>{{ var.facilities }}<br>
+    <label> Meal(Included/Not Included) : </label>{{ var.meals }}<br>
+    <label> Rent : </label>{{ var.rent }}<br>
+    </div> 
+    <div class="card-footer" style='color:rgb(7, 53, 82);font-size:120%;font-style: italic;'>
+            <label> Email : </label> {{ var.name }} <br>
+            <label> Contact Number : </label> {{ var.contact }}</div>
+  </div>
+  <!--<img height="30%" width="50%" src="{{ var.roompic }}">-->
+  {% endfor %}
+</div>
+
+</body>
+</html>
